@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Lớp màu nền -->
+    <item android:drawable="@color/main_color" />
+
+    <!-- Lớp ảnh nền -->
+    <item>
+        <bitmap
+            android:src="@drawable/image_7"
+            android:gravity="center"
+            android:alpha="0.5"
+            />
+    </item>
+</layer-list>

@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">QLBH</string>
+  <string name="welcome">Xin chào! Chào mừng đến với {Tên App}!</string>
 </resources>
