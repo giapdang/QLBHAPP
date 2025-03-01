@@ -15,20 +15,20 @@ import retrofit2.http.Query;
 
 public interface SanPhamApi {
 
-  @GET("http://localhost:3000/san_pham/HienThiAllSanPham.php")
+  @GET("san_pham/HienThiAllSanPham.php")
   Call<List<SanPhamResponse>> getAllSanPham();
 
-  @GET("http://localhost:3000/san_pham/HienThiSanPhamTheoDanhMUc.php")
+  @GET("san_pham/HienThiSanPhamTheoDanhMUc.php")
   Call<List<SanPhamResponse>> hienThiSanPhamTheoIdDanhMuc(@Query("id_danh_muc") String idDanhMuc);
 
-  @GET("http://localhost:3000/san_pham/ChiTietSanPham.php")
+  @GET("san_pham/ChiTietSanPham.php")
   Call<ChiTietSanPham> chiTietSanPham(@Query("id") String idSanPham);
 
-  @GET("http://localhost:3000/san_pham/TimKiemSanPham.php")
+  @GET("san_pham/TimKiemSanPham.php")
   Call<List<TimKiemSanPhamResponse>> timKiemSanPham(@Query("ten_san_pham") String tenSanPham);
 
   @Multipart
-  @POST("http://localhost:3000/san_pham/ThemSanPham.php")
+  @POST("san_pham/ThemSanPham.php")
   Call<Void> themSanPham(
       @Part("danh_muc_id") RequestBody danhMucId,
       @Part("ten_san_pham") RequestBody tenSanPham,
@@ -39,7 +39,7 @@ public interface SanPhamApi {
   );
 
   @Multipart
-  @POST("http://localhost:3000/san_pham/UpdateSanPham.php")
+  @POST("san_pham/UpdateSanPham.php")
   Call<Void> updateSanPham(
       @Part("id") RequestBody id,
       @Part("ten_san_pham") RequestBody tenSanPham,

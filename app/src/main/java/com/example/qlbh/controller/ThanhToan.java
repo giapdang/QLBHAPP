@@ -14,15 +14,15 @@ import retrofit2.http.Query;
 
 public interface ThanhToan {
 
-  @POST("http://localhost:3000/thanh_toan/ThemDonHang.php")
+  @POST("thanh_toan/ThemDonHang.php")
   Call<Void> themDonHang(@Body ThemDonHangRequest themDonHangRequest);
 
-  @GET("http://localhost:3000/thanh_toan/HienThiChiTietDonHang.php")
+  @GET("thanh_toan/HienThiChiTietDonHang.php")
   Call<List<ChiTietDonHangResponse>> hienThiChiTietDonHang(@Query("don_hang_id") Long donHangId);
 
-  @GET("http://localhost:3000/thanh_toan/HienThiDonHang.php")
+  @GET("thanh_toan/HienThiDonHang.php")
   Call<List<DonHangResponse>> hienThiDonHang();
 
-  @PUT("http://localhost:3000/thanh_toan/XacThucDonHang.php")
+  @PUT("thanh_toan/XacThucDonHang.php")
   Call<Void> xacThucDonHang(@Body XacThucDonHangRequest xacThucDonHangRequest);
 }

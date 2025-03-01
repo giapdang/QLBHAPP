@@ -12,15 +12,15 @@ import retrofit2.http.Query;
 
 public interface UserApi {
 
-  @GET("http://localhost:3000/user/ChiTietUser.php")
+  @GET("user/ChiTietUser.php")
   Call<UserResponse> chiTietUser(@Query("id") String id);
 
-  @GET("http://localhost:3000/user/HienThiUser.php")
+  @GET("user/HienThiUser.php")
   Call<List<UserResponse>> getAllUser();
 
-  @PUT("http://localhost:3000/user/DoiMatKhau.php")
+  @PUT("user/DoiMatKhau.php")
   Call<Void> doiMatKhau(@Body DoiMatKhauRequest doiMatKhauRequest);
 
-  @PUT("http://localhost:3000/user/UpdateUser.php")
+  @PUT("user/UpdateUser.php")
   Call<Void> updateUser(@Body UpdateUserRequest updateUserRequest);
 }

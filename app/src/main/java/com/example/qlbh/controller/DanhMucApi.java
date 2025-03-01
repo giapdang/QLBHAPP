@@ -14,16 +14,16 @@ import retrofit2.http.Query;
 
 public interface DanhMucApi {
 
-  @POST("http://localhost:3000/danh_muc/ThemDanhMuc.php")
+  @POST("danh_muc/ThemDanhMuc.php")
   Call<Void> themDanhMuc(@Body ThemDanhMucRequest themDanhMucRequest);
 
-  @GET("http://localhost:3000/danh_muc/HienThiAllDanhMuc.php")
+  @GET("danh_muc/HienThiAllDanhMuc.php")
   Call<List<DanhMucResponse>> hienThiAllDanhMuc();
 
-  @GET("http://localhost:3000/danh_muc/ChiTietDanhMuc.php")
+  @GET("danh_muc/ChiTietDanhMuc.php")
   Call<DanhMucChiTietResponse> chiTietDanhMuc(@Query("id") Long id);
 
-  @PUT("http://localhost:3000/danh_muc/UpdateDanhMuc.php")
+  @PUT("danh_muc/UpdateDanhMuc.php")
   Call<Void> updateDanhMuc(@Body UpdateDanhMucRequest updateDanhMucRequest);
 
 }
