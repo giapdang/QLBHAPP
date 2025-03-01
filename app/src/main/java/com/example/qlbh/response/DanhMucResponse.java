@@ -11,6 +11,17 @@ public class DanhMucResponse {
   @SerializedName("ten_danh_muc")
   private String tenDanhMuc;
 
+  @SerializedName("mo_ta")
+  private String moTa;
+
+  public String getMoTa() {
+    return moTa;
+  }
+
+  public void setMoTa(String moTa) {
+    this.moTa = moTa;
+  }
+
   // Getters and setters
   public Long getId() {
     return id;
