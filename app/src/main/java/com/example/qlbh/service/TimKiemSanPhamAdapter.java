@@ -1,6 +1,7 @@
 package com.example.qlbh.service;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
+import com.example.qlbh.ChiTietSanPhamActivity;
 import com.example.qlbh.R;
 import com.example.qlbh.response.TimKiemSanPhamResponse;
 import java.util.List;
@@ -23,6 +25,7 @@ public class TimKiemSanPhamAdapter extends RecyclerView.Adapter<TimKiemSanPhamAd
         this.sanPhamList = sanPhamList;
     }
 
+    // tao view holder de hien thi san pham len recyclerview san pham
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -30,23 +33,27 @@ public class TimKiemSanPhamAdapter extends RecyclerView.Adapter<TimKiemSanPhamAd
         return new ViewHolder(view);
     }
 
+    // hien thi san pham len recyclerview san pham
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         TimKiemSanPhamResponse sanPham = sanPhamList.get(position);
         holder.tenSanPham.setText(sanPham.getTenSanPham());
         holder.gia.setText(String.format("%s VND", sanPham.getGia()));
 
-        // Xử lý đường dẫn ảnh để loại bỏ "../"
         String imagePath = sanPham.getHinhAnh();
         if (imagePath.startsWith("../")) {
-            imagePath = imagePath.substring(3); // Cắt bỏ "../"
+            imagePath = imagePath.substring(3);
         }
-
-        // Đường dẫn đầy đủ của ảnh
         String imageUrl = "http://10.0.2.2:3000/" + imagePath;
 
-        // Load image using Glide
         Glide.with(context).load(imageUrl).into(holder.hinhAnh);
+
+        // click vao san pham de xem chi tiet san pham lay id san pham
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, ChiTietSanPhamActivity.class);
+            intent.putExtra("idSanPham", String.valueOf(sanPham.getId()));
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -54,8 +61,9 @@ public class TimKiemSanPhamAdapter extends RecyclerView.Adapter<TimKiemSanPhamAd
         return sanPhamList.size();
     }
 
+    // view holder de hien thi san pham len recyclerview san pham
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tenSanPham , gia;
+        TextView tenSanPham, gia;
         ImageView hinhAnh;
 
         public ViewHolder(@NonNull View itemView) {

@@ -21,6 +21,8 @@
     <activity android:name=".LoginActivity"></activity>
     <activity android:name=".HomeActivity"></activity>
     <activity android:name=".ForgetPasswordActivity"></activity>
+    <activity android:name=".ChiTietSanPhamActivity"></activity>
+    <activity android:name=".GioHangActivity"></activity>
     <activity
       android:exported="true"
       android:name=".MainActivity">
