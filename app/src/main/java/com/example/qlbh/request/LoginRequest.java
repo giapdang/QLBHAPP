@@ -1,8 +1,13 @@
 package com.example.qlbh.request;
 
+import com.google.gson.annotations.SerializedName;
+
 public class LoginRequest {
 
+  @SerializedName("email")
   private String email;
+
+  @SerializedName("mat_khau")
   private String password;
 
   public LoginRequest(String email, String password) {

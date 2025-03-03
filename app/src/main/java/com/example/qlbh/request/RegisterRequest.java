@@ -1,31 +1,57 @@
 package com.example.qlbh.request;
 
+import com.google.gson.annotations.SerializedName;
+
 public class RegisterRequest {
+  @SerializedName("ho_ten")
+  private String hoTen;
 
-  private String username;
+  @SerializedName("mat_khau")
+  private String matKhau;
+
+  @SerializedName("xac_nhan_mat_khau")
+  private String xacNhanMatKhau;
+
+  @SerializedName("email")
   private String email;
-  private String phone;
-  private String address;
-  private String password;
-  private String confirmPassword;
 
-  public RegisterRequest(String username, String email, String phone, String address,
-      String password,
-      String confirmPassword) {
-    this.username = username;
+  @SerializedName("so_dien_thoai")
+  private String soDienThoai;
+
+  @SerializedName("dia_chi")
+  private String diaChi;
+
+  public RegisterRequest(String hoTen, String matKhau, String xacNhanMatKhau, String email, String soDienThoai, String diaChi) {
+    this.hoTen = hoTen;
+    this.matKhau = matKhau;
+    this.xacNhanMatKhau = xacNhanMatKhau;
     this.email = email;
-    this.phone = phone;
-    this.address = address;
-    this.password = password;
-    this.confirmPassword = confirmPassword;
+    this.soDienThoai = soDienThoai;
+    this.diaChi = diaChi;
   }
 
-  public String getUsername() {
-    return username;
+  public String getHoTen() {
+    return hoTen;
   }
 
-  public void setUsername(String username) {
-    this.username = username;
+  public void setHoTen(String hoTen) {
+    this.hoTen = hoTen;
+  }
+
+  public String getMatKhau() {
+    return matKhau;
+  }
+
+  public void setMatKhau(String matKhau) {
+    this.matKhau = matKhau;
+  }
+
+  public String getXacNhanMatKhau() {
+    return xacNhanMatKhau;
+  }
+
+  public void setXacNhanMatKhau(String xacNhanMatKhau) {
+    this.xacNhanMatKhau = xacNhanMatKhau;
   }
 
   public String getEmail() {
@@ -36,35 +62,19 @@ public class RegisterRequest {
     this.email = email;
   }
 
-  public String getPhone() {
-    return phone;
+  public String getSoDienThoai() {
+    return soDienThoai;
   }
 
-  public void setPhone(String phone) {
-    this.phone = phone;
+  public void setSoDienThoai(String soDienThoai) {
+    this.soDienThoai = soDienThoai;
   }
 
-  public String getAddress() {
-    return address;
+  public String getDiaChi() {
+    return diaChi;
   }
 
-  public void setAddress(String address) {
-    this.address = address;
-  }
-
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
-  public String getConfirmPassword() {
-    return confirmPassword;
-  }
-
-  public void setConfirmPassword(String confirmPassword) {
-    this.confirmPassword = confirmPassword;
+  public void setDiaChi(String diaChi) {
+    this.diaChi = diaChi;
   }
 }

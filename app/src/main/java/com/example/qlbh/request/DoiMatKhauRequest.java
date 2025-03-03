@@ -1,10 +1,17 @@
 // src/main/java/com/example/qlbh/request/DoiMatKhauRequest.java
 package com.example.qlbh.request;
 
+import com.google.gson.annotations.SerializedName;
+
 public class DoiMatKhauRequest {
 
+  @SerializedName("old_password")
   private String oldPassword;
+
+  @SerializedName("new_password")
   private String newPassword;
+
+  @SerializedName("confirm_password")
   private String confirmPassword;
 
   public DoiMatKhauRequest(String oldPassword, String newPassword, String confirmPassword) {

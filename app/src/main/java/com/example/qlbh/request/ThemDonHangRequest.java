@@ -2,10 +2,12 @@
 package com.example.qlbh.request;
 
 import com.example.qlbh.entity.SanPham;
+import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class ThemDonHangRequest {
 
+  @SerializedName("san_pham")
   private List<SanPham> sanPham;
 
   public ThemDonHangRequest(List<SanPham> sanPham) {

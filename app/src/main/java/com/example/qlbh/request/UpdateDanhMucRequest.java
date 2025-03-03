@@ -1,9 +1,16 @@
 package com.example.qlbh.request;
 
+import com.google.gson.annotations.SerializedName;
+
 public class UpdateDanhMucRequest {
 
+  @SerializedName("id")
   private Long id;
+
+  @SerializedName("ten_danh_muc")
   private String tenDanhMuc;
+
+  @SerializedName("mo_ta")
   private String moTa;
 
   public UpdateDanhMucRequest(Long id, String tenDanhMuc, String moTa) {

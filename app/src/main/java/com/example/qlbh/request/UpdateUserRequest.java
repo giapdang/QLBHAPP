@@ -1,11 +1,20 @@
 // src/main/java/com/example/qlbh/request/UpdateUserRequest.java
 package com.example.qlbh.request;
 
+import com.google.gson.annotations.SerializedName;
+
 public class UpdateUserRequest {
 
+  @SerializedName("ho_ten")
   private String hoTen;
+
+  @SerializedName("email")
   private String email;
+
+  @SerializedName("so_dien_thoai")
   private String soDienThoai;
+
+  @SerializedName("dia_chi")
   private String diaChi;
 
   public UpdateUserRequest(String hoTen, String email, String soDienThoai, String diaChi) {

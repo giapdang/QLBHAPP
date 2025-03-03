@@ -1,0 +1,13 @@
+<!-- res/drawable/new_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#B774BFC9" /> <!-- Background color -->
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/reg"
+            android:gravity="center" />
+    </item>
+</layer-list>

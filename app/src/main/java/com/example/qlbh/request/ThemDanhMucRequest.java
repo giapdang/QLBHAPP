@@ -1,9 +1,14 @@
 // src/main/java/com/example/qlbh/request/ThemDanhMucRequest.java
 package com.example.qlbh.request;
 
+import com.google.gson.annotations.SerializedName;
+
 public class ThemDanhMucRequest {
 
+  @SerializedName("ten_danh_muc")
   private String tenDanhMuc;
+
+  @SerializedName("mo_ta")
   private String moTa;
 
   public ThemDanhMucRequest(String tenDanhMuc, String moTa) {

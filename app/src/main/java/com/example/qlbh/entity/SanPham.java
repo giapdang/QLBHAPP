@@ -1,10 +1,19 @@
 package com.example.qlbh.entity;
 
+import com.google.gson.annotations.SerializedName;
+
 public class SanPham {
 
+  @SerializedName("gio_hang_id")
   private Long gioHangId;
+
+  @SerializedName("san_pham_id")
   private Long sanPhamId;
+
+  @SerializedName("so_luong")
   private int soLuong;
+
+  @SerializedName("don_gia")
   private double donGia;
 
   public SanPham(Long gioHangId, Long sanPhamId, int soLuong, double donGia) {

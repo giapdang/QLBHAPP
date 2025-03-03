@@ -6,14 +6,47 @@
   android:id="@+id/main"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:background="@drawable/background_with_opacity"
   tools:context=".MainActivity">
   <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Hello World!"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/textView"
+    android:textStyle="bold"
+    android:layout_width="367dp"
+    android:layout_height="103dp"
+    android:layout_marginTop="328dp"
+    android:layout_marginStart="20dp"
+    android:text="Xin chào! Chào mừng đến với GT Store"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:textSize="36sp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
-
+  <Button
+    android:id="@+id/login"
+    android:textStyle="bold"
+    android:layout_width="306dp"
+    android:layout_height="53dp"
+    android:layout_marginTop="452dp"
+    android:layout_marginStart="52dp"
+    android:backgroundTint="@android:color/white"
+    android:text="Đăng nhập"
+    android:textAlignment="center"
+    android:textColor="@android:color/black"
+    android:textSize="25sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+  <Button
+    android:id="@+id/register"
+    android:textStyle="bold"
+    android:layout_width="306dp"
+    android:layout_height="53dp"
+    android:layout_marginTop="536dp"
+    android:layout_marginStart="52dp"
+    android:backgroundTint="@android:color/white"
+    android:text="Đăng ký"
+    android:textAlignment="center"
+    android:textColor="@android:color/black"
+    android:textSize="25sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

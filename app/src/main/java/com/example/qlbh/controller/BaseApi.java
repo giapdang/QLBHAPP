@@ -3,6 +3,7 @@ package com.example.qlbh.controller;
 import com.example.qlbh.request.ForgetPasswordRequest;
 import com.example.qlbh.request.LoginRequest;
 import com.example.qlbh.request.RegisterRequest;
+import com.example.qlbh.response.LoginResponse;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
@@ -13,7 +14,7 @@ public interface BaseApi {
   Call<Void> registerUser(@Body RegisterRequest registerRequest);
 
   @POST("login/Login.php")
-  Call<Void> loginUser(@Body LoginRequest loginRequest);
+  Call<LoginResponse> loginUser(@Body LoginRequest loginRequest);
 
   @POST("fogetpass/checkMail.php")
   Call<Void> checkEmail(@Body String email);

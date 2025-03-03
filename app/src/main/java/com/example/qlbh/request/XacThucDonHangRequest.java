@@ -1,9 +1,14 @@
 // src/main/java/com/example/qlbh/request/XacThucDonHangRequest.java
 package com.example.qlbh.request;
 
+import com.google.gson.annotations.SerializedName;
+
 public class XacThucDonHangRequest {
 
+  @SerializedName("don_hang_id")
   private Long donHangId;
+
+  @SerializedName("trang_thai")
   private String trangThai;
 
   public XacThucDonHangRequest(Long donHangId, String trangThai) {
