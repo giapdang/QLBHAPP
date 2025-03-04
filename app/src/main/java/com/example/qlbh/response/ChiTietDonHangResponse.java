@@ -12,18 +12,27 @@ public class ChiTietDonHangResponse {
   private String tenSanPham;
 
   @SerializedName("gia")
-  private String gia;
+  private Double gia;
 
   @SerializedName("so_luong")
   private int soLuong;
 
   @SerializedName("don_gia")
-  private String donGia;
+  private Double donGia;
 
   @SerializedName("thanh_tien")
   private String thanhTien;
 
-  // Getters and setters
+  public ChiTietDonHangResponse(Long id, String tenSanPham, Double gia, int soLuong, Double donGia,
+      String thanhTien) {
+    this.id = id;
+    this.tenSanPham = tenSanPham;
+    this.gia = gia;
+    this.soLuong = soLuong;
+    this.donGia = donGia;
+    this.thanhTien = thanhTien;
+  }
+
   public Long getId() {
     return id;
   }
@@ -40,11 +49,11 @@ public class ChiTietDonHangResponse {
     this.tenSanPham = tenSanPham;
   }
 
-  public String getGia() {
+  public Double getGia() {
     return gia;
   }
 
-  public void setGia(String gia) {
+  public void setGia(Double gia) {
     this.gia = gia;
   }
 
@@ -56,11 +65,11 @@ public class ChiTietDonHangResponse {
     this.soLuong = soLuong;
   }
 
-  public String getDonGia() {
+  public Double getDonGia() {
     return donGia;
   }
 
-  public void setDonGia(String donGia) {
+  public void setDonGia(Double donGia) {
     this.donGia = donGia;
   }
 

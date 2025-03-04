@@ -1,9 +1,11 @@
-// src/main/java/com/example/qlbh/request/ThemSanPhamGioHangRequest.java
 package com.example.qlbh.request;
 
 import com.google.gson.annotations.SerializedName;
 
 public class ThemSanPhamGioHangRequest {
+
+  @SerializedName("user_id")
+  private Long userId;
 
   @SerializedName("san_pham_id")
   private Long sanPhamId;
@@ -11,9 +13,18 @@ public class ThemSanPhamGioHangRequest {
   @SerializedName("so_luong")
   private int soLuong;
 
-  public ThemSanPhamGioHangRequest(Long sanPhamId, int soLuong) {
+  public ThemSanPhamGioHangRequest(Long userId, Long sanPhamId, int soLuong) {
+    this.userId = userId;
     this.sanPhamId = sanPhamId;
     this.soLuong = soLuong;
+  }
+
+  public Long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Long userId) {
+    this.userId = userId;
   }
 
   public Long getSanPhamId() {

@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class SanPham {
 
+  @SerializedName("ten_san_pham")
+  private String tenSanPham;
+
   @SerializedName("gio_hang_id")
   private Long gioHangId;
 
@@ -16,11 +19,25 @@ public class SanPham {
   @SerializedName("don_gia")
   private double donGia;
 
-  public SanPham(Long gioHangId, Long sanPhamId, int soLuong, double donGia) {
+  @SerializedName("hinh_anh")
+  private String hinhaAnh;
+
+  public SanPham(String tenSanPham, Long gioHangId, Long sanPhamId, int soLuong, double donGia,
+      String hinhaAnh) {
+    this.tenSanPham = tenSanPham;
     this.gioHangId = gioHangId;
     this.sanPhamId = sanPhamId;
     this.soLuong = soLuong;
     this.donGia = donGia;
+    this.hinhaAnh = hinhaAnh;
+  }
+
+  public String getTenSanPham() {
+    return tenSanPham;
+  }
+
+  public void setTenSanPham(String tenSanPham) {
+    this.tenSanPham = tenSanPham;
   }
 
   public Long getGioHangId() {
@@ -55,4 +72,11 @@ public class SanPham {
     this.donGia = donGia;
   }
 
+  public String getHinhaAnh() {
+    return hinhaAnh;
+  }
+
+  public void setHinhaAnh(String hinhaAnh) {
+    this.hinhaAnh = hinhaAnh;
+  }
 }

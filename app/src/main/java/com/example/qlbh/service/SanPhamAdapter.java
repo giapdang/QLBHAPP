@@ -49,6 +49,7 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
 
         Glide.with(context).load(imageUrl).into(holder.imgSanPham);
 
+        // click vao san pham de xem chi tiet san pham lay id san pham
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, ChiTietSanPhamActivity.class);
             intent.putExtra("idSanPham", String.valueOf(sanPham.getId()));

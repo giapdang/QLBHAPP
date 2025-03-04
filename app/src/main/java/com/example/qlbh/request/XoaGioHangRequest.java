@@ -8,8 +8,12 @@ public class XoaGioHangRequest {
   @SerializedName("gio_hang_id")
   private Long gioHangId;
 
-  public XoaGioHangRequest(Long gioHangId) {
+  @SerializedName("user_id")
+  private Long userId;
+
+  public XoaGioHangRequest(Long gioHangId, Long userId) {
     this.gioHangId = gioHangId;
+    this.userId = userId;
   }
 
   public Long getGioHangId() {
@@ -18,5 +22,13 @@ public class XoaGioHangRequest {
 
   public void setGioHangId(Long gioHangId) {
     this.gioHangId = gioHangId;
+  }
+
+  public Long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Long userId) {
+    this.userId = userId;
   }
 }

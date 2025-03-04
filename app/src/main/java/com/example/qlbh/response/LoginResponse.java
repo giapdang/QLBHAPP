@@ -1,14 +1,28 @@
 package com.example.qlbh.response;
 
+import com.google.gson.annotations.SerializedName;
+
 public class LoginResponse {
 
-  private String message;
+    @SerializedName("success")
+    private String success;
 
-  public String getMessage() {
-    return message;
-  }
+    @SerializedName("user_id")
+    private int userId;
 
-  public void setMessage(String message) {
-    this.message = message;
-  }
+    public String getSuccess() {
+        return success;
+    }
+
+    public void setSuccess(String success) {
+        this.success = success;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 }

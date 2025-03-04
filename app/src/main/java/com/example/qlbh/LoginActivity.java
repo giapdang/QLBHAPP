@@ -1,6 +1,8 @@
 package com.example.qlbh;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +25,8 @@ public class LoginActivity extends AppCompatActivity {
   private Button login;
   private TextView dangky, quenmk;
   private static final String TAG = "LoginActivity";
+  private static final String PREFS_NAME = "MyPrefs";
+  private static final String USER_ID_KEY = "user_id";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -83,9 +87,15 @@ public class LoginActivity extends AppCompatActivity {
       call.enqueue(new Callback<LoginResponse>() {
           @Override
           public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-              if (response.isSuccessful() && response.body() != null && "Đăng nhập thành công.".equals(response.body().getMessage())) {
+              if (response.isSuccessful() && response.body() != null && "Đăng nhập thành công.".equals(response.body().getSuccess())) {
                   Log.d(TAG, "Login successful");
                   Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+
+                  // Save user_id to SharedPreferences
+                  SharedPreferences sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+                  SharedPreferences.Editor editor = sharedPreferences.edit();
+                  editor.putLong(USER_ID_KEY, response.body().getUserId());
+                  editor.apply();
 
                   Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                   startActivity(intent);

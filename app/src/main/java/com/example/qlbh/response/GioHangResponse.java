@@ -15,7 +15,7 @@ public class GioHangResponse {
   private String tenSanPham;
 
   @SerializedName("gia")
-  private String gia;
+  private Double gia;
 
   @SerializedName("so_luong")
   private int soLuong;
@@ -23,7 +23,16 @@ public class GioHangResponse {
   @SerializedName("hinh_anh")
   private String hinhAnh;
 
-  // Getters and setters
+  public GioHangResponse(Long id, Long idSanPham, String tenSanPham, Double gia, int soLuong,
+      String hinhAnh) {
+    this.id = id;
+    this.idSanPham = idSanPham;
+    this.tenSanPham = tenSanPham;
+    this.gia = gia;
+    this.soLuong = soLuong;
+    this.hinhAnh = hinhAnh;
+  }
+
   public Long getId() {
     return id;
   }
@@ -48,11 +57,11 @@ public class GioHangResponse {
     this.tenSanPham = tenSanPham;
   }
 
-  public String getGia() {
+  public Double getGia() {
     return gia;
   }
 
-  public void setGia(String gia) {
+  public void setGia(Double gia) {
     this.gia = gia;
   }
 
