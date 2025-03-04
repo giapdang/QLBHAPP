@@ -23,6 +23,8 @@
     <activity android:name=".ForgetPasswordActivity"></activity>
     <activity android:name=".ChiTietSanPhamActivity"></activity>
     <activity android:name=".GioHangActivity"></activity>
+    <activity android:name=".DonHangActivity"></activity>
+    <activity android:name=".QrActivity"></activity>
     <activity
       android:exported="true"
       android:name=".MainActivity">

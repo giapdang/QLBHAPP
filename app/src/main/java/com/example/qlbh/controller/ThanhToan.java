@@ -21,7 +21,7 @@ public interface ThanhToan {
   Call<List<ChiTietDonHangResponse>> hienThiChiTietDonHang(@Query("don_hang_id") Long donHangId);
 
   @GET("thanh_toan/HienThiDonHang.php")
-  Call<List<DonHangResponse>> hienThiDonHang();
+  Call<List<DonHangResponse>> hienThiDonHang(@Query("user_id") Long userId);
 
   @PUT("thanh_toan/XacThucDonHang.php")
   Call<Void> xacThucDonHang(@Body XacThucDonHangRequest xacThucDonHangRequest);

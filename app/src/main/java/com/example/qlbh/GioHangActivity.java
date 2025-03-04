@@ -1,6 +1,7 @@
 package com.example.qlbh;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -157,7 +158,17 @@ public class GioHangActivity extends AppCompatActivity implements
       @Override
       public void onResponse(Call<Void> call, Response<Void> response) {
         if (response.isSuccessful()) {
-          Toast.makeText(GioHangActivity.this, "Order created successfully", Toast.LENGTH_SHORT).show();
+          Toast.makeText(GioHangActivity.this, "Order created successfully", Toast.LENGTH_SHORT)
+              .show();
+          // load lại danh sách giỏ hàng
+          fetchGioHang(userId);
+          // reset total price
+          totalPriceTextView.setText("0 VND");
+          // xoá danh sách sản phẩm đã chọn
+          selectedItems.clear();
+          // qua form qr code
+          Intent intent = new Intent(GioHangActivity.this, QrActivity.class);
+          startActivity(intent);
         } else {
           Toast.makeText(GioHangActivity.this, "Failed to create order", Toast.LENGTH_SHORT).show();
         }

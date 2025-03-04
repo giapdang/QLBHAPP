@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="8dp"
+  android:background="@drawable/border">
+
+  <Button
+    android:id="@+id/btnXemChiTiet"
+    android:textStyle="bold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:backgroundTint="#3a596b"
+    android:text="Chi tiết"
+    android:textColor="@android:color/white"
+    android:textSize="10sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/tvNgayTao"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.15"/>
+
+  <TextView
+    android:id="@+id/tvTongTien"
+    android:textStyle="bold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="1,000,000 VND"
+    android:textColor="@android:color/holo_red_dark"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toEndOf="@id/tvSoThuTu"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.3"/>
+
+  <TextView
+    android:id="@+id/tvTrangThai"
+    android:textStyle="bold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="Pending"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toEndOf="@id/tvTongTien"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.2"/>
+
+  <TextView
+    android:id="@+id/tvNgayTao"
+    android:textStyle="bold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="2025-03-03"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toEndOf="@id/tvTrangThai"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.25"/>
+
+  <TextView
+    android:id="@+id/tvSoThuTu"
+    android:textStyle="bold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="1"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <ImageView
+    android:id="@+id/qrImageView"
+    android:layout_width="302dp"
+    android:layout_height="304dp"
+    android:layout_marginTop="148dp"
+    android:contentDescription="QR Code"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+  <Button
+    android:id="@+id/btnXacNhan"
+    android:textStyle="bold"
+    android:layout_width="244dp"
+    android:layout_height="73dp"
+    android:layout_marginTop="32dp"
+    android:backgroundTint="#3a596b"
+    android:text="Xác nhận thanh toán"
+    android:textAlignment="center"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/qrImageView"/>
+  <LinearLayout
+    android:id="@+id/linearLayoutBottom"
+    android:layout_width="364dp"
+    android:layout_height="67dp"
+    android:layout_marginBottom="28dp"
+    android:padding="8dp"
+    android:background="@drawable/custom_tab"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.489"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <ImageView
+      android:id="@+id/imageViewProfile"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_margin="8dp"
+      android:src="@drawable/profile"/>
+
+    <ImageView
+      android:id="@+id/imageViewCart"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_margin="8dp"
+      android:src="@drawable/gio_hang"/>
+
+    <ImageView
+      android:id="@+id/imageViewHome"
+      android:layout_width="52dp"
+      android:layout_height="52dp"
+      android:layout_margin="8dp"
+      android:background="@drawable/imageview_background"
+      android:src="@drawable/trang_chu"/>
+
+    <ImageView
+      android:id="@+id/imageViewHistory"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_margin="8dp"
+      android:src="@drawable/licsu"/>
+
+    <ImageView
+      android:id="@+id/imageViewSettings"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_margin="8dp"
+      android:src="@drawable/cai_dat"/>
+  </LinearLayout>
+  <TextView
+    android:id="@+id/textView9"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="44dp"
+    android:layout_marginStart="80dp"
+    android:text="Mã QR code thanh toán "
+    android:textAlignment="center"
+    android:textSize="25sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
