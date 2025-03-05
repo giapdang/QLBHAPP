@@ -119,8 +119,8 @@ public class GioHangActivity extends AppCompatActivity implements
       @Override
       public void onResponse(Call<Void> call, Response<Void> response) {
         if (response.isSuccessful()) {
-          Toast.makeText(GioHangActivity.this, "Đã xóa sản phẩm khỏi giỏ hàng", Toast.LENGTH_SHORT)
-              .show();
+//          Toast.makeText(GioHangActivity.this, "Đã xóa sản phẩm khỏi giỏ hàng", Toast.LENGTH_SHORT)
+//              .show();
           // load lại danh sách giỏ hàng
           fetchGioHang(userId);
         } else {
@@ -158,8 +158,8 @@ public class GioHangActivity extends AppCompatActivity implements
       @Override
       public void onResponse(Call<Void> call, Response<Void> response) {
         if (response.isSuccessful()) {
-          Toast.makeText(GioHangActivity.this, "Order created successfully", Toast.LENGTH_SHORT)
-              .show();
+//          Toast.makeText(GioHangActivity.this, "Order created successfully", Toast.LENGTH_SHORT)
+//              .show();
           // load lại danh sách giỏ hàng
           fetchGioHang(userId);
           // reset total price

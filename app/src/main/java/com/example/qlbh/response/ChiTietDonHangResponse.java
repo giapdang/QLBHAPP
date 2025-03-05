@@ -17,19 +17,20 @@ public class ChiTietDonHangResponse {
   @SerializedName("so_luong")
   private int soLuong;
 
-  @SerializedName("don_gia")
-  private Double donGia;
+  @SerializedName("hinh_anh")
+  private String hinhAnh;
+
 
   @SerializedName("thanh_tien")
   private String thanhTien;
 
-  public ChiTietDonHangResponse(Long id, String tenSanPham, Double gia, int soLuong, Double donGia,
+  public ChiTietDonHangResponse(Long id, String tenSanPham, Double gia, int soLuong, String hinhAnh,
       String thanhTien) {
     this.id = id;
     this.tenSanPham = tenSanPham;
     this.gia = gia;
     this.soLuong = soLuong;
-    this.donGia = donGia;
+    this.hinhAnh = hinhAnh;
     this.thanhTien = thanhTien;
   }
 
@@ -65,12 +66,12 @@ public class ChiTietDonHangResponse {
     this.soLuong = soLuong;
   }
 
-  public Double getDonGia() {
-    return donGia;
+  public String getHinhAnh() {
+    return hinhAnh;
   }
 
-  public void setDonGia(Double donGia) {
-    this.donGia = donGia;
+  public void setHinhAnh(String hinhAnh) {
+    this.hinhAnh = hinhAnh;
   }
 
   public String getThanhTien() {
