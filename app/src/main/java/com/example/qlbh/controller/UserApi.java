@@ -13,7 +13,7 @@ import retrofit2.http.Query;
 public interface UserApi {
 
   @GET("user/ChiTietUser.php")
-  Call<UserResponse> chiTietUser(@Query("id") String id);
+  Call<UserResponse> chiTietUser(@Query("user_id") Long userId);
 
   @GET("user/HienThiUser.php")
   Call<List<UserResponse>> getAllUser();

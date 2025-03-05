@@ -26,6 +26,7 @@
     <activity android:name=".DonHangActivity"></activity>
     <activity android:name=".QrActivity"></activity>
     <activity android:name=".ChiTietDonHangActivity"></activity>
+    <activity android:name=".ProfileActivity"></activity>
     <activity
       android:exported="true"
       android:name=".MainActivity">

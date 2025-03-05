@@ -110,6 +110,16 @@ public class ChiTietSanPhamActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // chuyen sang trang ca nhan
+        imgUser = findViewById(R.id.imageViewProfile);
+        imgUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChiTietSanPhamActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     // gọi API để lấy thông tin chi tiết sản phẩm

@@ -5,6 +5,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class UpdateUserRequest {
 
+  @SerializedName("user_id")
+  private Long userId;
+
   @SerializedName("ho_ten")
   private String hoTen;
 
@@ -17,11 +20,21 @@ public class UpdateUserRequest {
   @SerializedName("dia_chi")
   private String diaChi;
 
-  public UpdateUserRequest(String hoTen, String email, String soDienThoai, String diaChi) {
+  public UpdateUserRequest(Long userId, String hoTen, String email, String soDienThoai,
+      String diaChi) {
+    this.userId = userId;
     this.hoTen = hoTen;
     this.email = email;
     this.soDienThoai = soDienThoai;
     this.diaChi = diaChi;
+  }
+
+  public Long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Long userId) {
+    this.userId = userId;
   }
 
   public String getHoTen() {

@@ -56,6 +56,13 @@ public class QrActivity extends AppCompatActivity {
       Intent intent = new Intent(QrActivity.this, DonHangActivity.class);
       startActivity(intent);
     });
+
+    // chuyen sang user
+    imgUser = findViewById(R.id.imageViewProfile);
+    imgUser.setOnClickListener(v -> {
+      Intent intent = new Intent(QrActivity.this, ProfileActivity.class);
+      startActivity(intent);
+    });
   }
 
   private Bitmap generateQRCode(String content) {

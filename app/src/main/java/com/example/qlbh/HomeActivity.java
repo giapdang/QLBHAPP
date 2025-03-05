@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.qlbh.config.ApiClient;
-import com.example.qlbh.controller.BaseApi;
 import com.example.qlbh.controller.DanhMucApi;
 import com.example.qlbh.controller.SanPhamApi;
 import com.example.qlbh.response.DanhMucResponse;
@@ -75,6 +74,15 @@ public class HomeActivity extends AppCompatActivity implements DanhMucAdapter.On
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this, DonHangActivity.class));
+            }
+        });
+
+        imgUser = findViewById(R.id.imageView);
+        imgUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
             }
         });
     }

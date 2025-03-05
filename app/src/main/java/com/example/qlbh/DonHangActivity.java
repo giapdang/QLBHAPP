@@ -57,6 +57,13 @@ public class DonHangActivity extends AppCompatActivity {
       startActivity(intent);
     });
 
+    // Chuyen sang user
+    imgUser = findViewById(R.id.imageViewProfile);
+    imgUser.setOnClickListener(v -> {
+      Intent intent = new Intent(DonHangActivity.this, ProfileActivity.class);
+      startActivity(intent);
+    });
+
   }
 
   // Lay danh sach don hang tu API
