@@ -1,5 +1,6 @@
 package com.example.qlbh;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,7 +33,7 @@ public class HomeActivity extends AppCompatActivity implements DanhMucAdapter.On
     private SanPhamAdapter sanPhamAdapter;
     private TimKiemSanPhamAdapter timKiemSanPhamAdapter;
     private EditText edtSearch;
-    private ImageView btnSearch;
+    private ImageView btnSearch, imgGioHang, imgDonHang, imgUser, imgCaiDat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,22 @@ public class HomeActivity extends AppCompatActivity implements DanhMucAdapter.On
                 } else {
                     Toast.makeText(HomeActivity.this, "Please enter a search query", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        imgGioHang = findViewById(R.id.imageView2);
+        imgGioHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, GioHangActivity.class));
+            }
+        });
+
+        imgDonHang = findViewById(R.id.imageView4);
+        imgDonHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, DonHangActivity.class));
             }
         });
     }
@@ -136,6 +153,9 @@ public class HomeActivity extends AppCompatActivity implements DanhMucAdapter.On
             }
         });
     }
+
+    // nhan vao tab bar imageView 2 thi chuyen sang gio hang cua 1 user
+
 
     @Override
     public void onItemClick(DanhMucResponse danhMuc) {

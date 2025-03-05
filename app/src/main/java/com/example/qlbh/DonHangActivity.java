@@ -1,9 +1,11 @@
 package com.example.qlbh;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,6 +24,7 @@ public class DonHangActivity extends AppCompatActivity {
   private RecyclerView recyclerViewDonHang;
   private DonHangAdapter donHangAdapter;
   private static final String TAG = "DonHangActivity";
+  private ImageView imgHome, imgGioHang, imgUser, imgCatDat;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,21 @@ public class DonHangActivity extends AppCompatActivity {
     } else {
       Toast.makeText(this, "User ID not found", Toast.LENGTH_SHORT).show();
     }
+
+    // Chuyen sang home
+    imgHome = findViewById(R.id.imageViewHome);
+    imgHome.setOnClickListener(v -> {
+      Intent intent = new Intent(DonHangActivity.this, HomeActivity.class);
+      startActivity(intent);
+    });
+
+    // Chuyen sang gio hang
+    imgGioHang = findViewById(R.id.imageViewCart);
+    imgGioHang.setOnClickListener(v -> {
+      Intent intent = new Intent(DonHangActivity.this, GioHangActivity.class);
+      startActivity(intent);
+    });
+
   }
 
   // Lay danh sach don hang tu API

@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +33,7 @@ public class GioHangActivity extends AppCompatActivity implements
   private TextView totalPriceTextView;
   private Button btnThanhToan;
   private static final String TAG = "GioHangActivity";
+  private ImageView imgHome, imgUser,imgDonHang,imgCaiDat;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,20 @@ public class GioHangActivity extends AppCompatActivity implements
       } else {
         Toast.makeText(this, "No items selected", Toast.LENGTH_SHORT).show();
       }
+    });
+
+    // chuyển qua home
+    imgHome = findViewById(R.id.imageView3);
+    imgHome.setOnClickListener(v -> {
+      Intent intent = new Intent(GioHangActivity.this, HomeActivity.class);
+      startActivity(intent);
+    });
+
+    // chuyen qua don hang
+    imgDonHang = findViewById(R.id.imageView4);
+    imgDonHang.setOnClickListener(v -> {
+      Intent intent = new Intent(GioHangActivity.this, DonHangActivity.class);
+      startActivity(intent);
     });
   }
 

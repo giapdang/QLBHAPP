@@ -1,8 +1,10 @@
 
 package com.example.qlbh;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,6 +23,7 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
     private RecyclerView recyclerViewChiTietDonHang;
     private ChiTietDonHangAdapter chiTietDonHangAdapter;
     private Button btdong;
+    private ImageView imgDonHang,imgHome, imgUser,imgGioHang,imgCaiDat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,27 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
         btdong = findViewById(R.id.btnDong);
         btdong.setOnClickListener(v -> {
             finish();
+        });
+
+        // Chuyển sang home
+        imgHome = findViewById(R.id.imageViewHome);
+        imgHome.setOnClickListener(v -> {
+            Intent intent = new Intent(ChiTietDonHangActivity.this, HomeActivity.class);
+            startActivity(intent);
+        });
+
+        // Chuyển sang giỏ hàng
+        imgGioHang = findViewById(R.id.imageViewCart);
+        imgGioHang.setOnClickListener(v -> {
+            Intent intent = new Intent(ChiTietDonHangActivity.this, GioHangActivity.class);
+            startActivity(intent);
+        });
+
+        // chuyen sang don hang
+        imgDonHang = findViewById(R.id.imageViewHistory);
+        imgDonHang.setOnClickListener(v -> {
+            Intent intent = new Intent(ChiTietDonHangActivity.this, DonHangActivity.class);
+            startActivity(intent);
         });
     }
 

@@ -26,7 +26,7 @@ import retrofit2.Response;
 public class ChiTietSanPhamActivity extends AppCompatActivity {
 
     private static final String TAG = "ChiTietSanPhamActivity";
-    private ImageView imgSanPham;
+    private ImageView imgSanPham , imgGioHang, imgDonHang, imgUser, imgCaiDat , imgHome;
     private TextView tenSanPham, giaSanPham, moTaSanPham;
     private EditText soLuong;
     private Button btnThemVaoGioHang, btnTang, btnGiam;
@@ -78,6 +78,36 @@ public class ChiTietSanPhamActivity extends AppCompatActivity {
                 themSanPhamVaoGioHang(userId, Long.parseLong(idSanPham), soLuongSanPham);
             } else {
                 Toast.makeText(ChiTietSanPhamActivity.this, "User ID not found", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // chuyen sang gio hang
+        imgGioHang = findViewById(R.id.imageViewCart);
+        imgGioHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChiTietSanPhamActivity.this, GioHangActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // chuyen sang don hang
+        imgDonHang = findViewById(R.id.imageViewHistory);
+        imgDonHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChiTietSanPhamActivity.this, DonHangActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // chuyen ve trang chu
+        imgHome = findViewById(R.id.imageViewHome);
+        imgHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChiTietSanPhamActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

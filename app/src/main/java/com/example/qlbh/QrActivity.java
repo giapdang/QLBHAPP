@@ -12,6 +12,8 @@ import com.google.zxing.qrcode.QRCodeWriter;
 
 public class QrActivity extends AppCompatActivity {
 
+  private ImageView imgHome, imgGioHang, imgUser , imgDonHang , imgCaiDat;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -32,6 +34,27 @@ public class QrActivity extends AppCompatActivity {
       Intent intent = new Intent(QrActivity.this, DonHangActivity.class);
       startActivity(intent);
 
+    });
+
+    // chuyen sang form home
+    imgHome = findViewById(R.id.imageViewHome);
+    imgHome.setOnClickListener(v -> {
+      Intent intent = new Intent(QrActivity.this, HomeActivity.class);
+      startActivity(intent);
+    });
+
+    // chuyen sang form gio hang
+    imgGioHang = findViewById(R.id.imageViewCart);
+    imgGioHang.setOnClickListener(v -> {
+      Intent intent = new Intent(QrActivity.this, GioHangActivity.class);
+      startActivity(intent);
+    });
+
+    // chuyen sang form don hang
+    imgDonHang = findViewById(R.id.imageViewHistory);
+    imgDonHang.setOnClickListener(v -> {
+      Intent intent = new Intent(QrActivity.this, DonHangActivity.class);
+      startActivity(intent);
     });
   }
 
