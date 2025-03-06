@@ -93,6 +93,15 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Chuyển sang cai dat
+        imgCaiDat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, CaiDatActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void fetchUserProfile(Long userId) {

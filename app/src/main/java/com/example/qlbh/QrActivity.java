@@ -63,6 +63,13 @@ public class QrActivity extends AppCompatActivity {
       Intent intent = new Intent(QrActivity.this, ProfileActivity.class);
       startActivity(intent);
     });
+
+    // chuyen sang form cai dat
+    imgCaiDat = findViewById(R.id.imageViewSettings);
+    imgCaiDat.setOnClickListener(v -> {
+      Intent intent = new Intent(QrActivity.this, CaiDatActivity.class);
+      startActivity(intent);
+    });
   }
 
   private Bitmap generateQRCode(String content) {

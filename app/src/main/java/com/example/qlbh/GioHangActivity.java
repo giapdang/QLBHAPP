@@ -83,6 +83,13 @@ public class GioHangActivity extends AppCompatActivity implements
       Intent intent = new Intent(GioHangActivity.this, ProfileActivity.class);
       startActivity(intent);
     });
+
+    // chuyen qua cai dat
+    imgCaiDat = findViewById(R.id.imageView5);
+    imgCaiDat.setOnClickListener(v -> {
+      Intent intent = new Intent(GioHangActivity.this, CaiDatActivity.class);
+      startActivity(intent);
+    });
   }
 
   private void fetchGioHang(Long userId) {

@@ -72,6 +72,13 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
             Intent intent = new Intent(ChiTietDonHangActivity.this, ProfileActivity.class);
             startActivity(intent);
         });
+
+        // Chuyển sang cài đặt
+        imgCaiDat = findViewById(R.id.imageViewSettings);
+        imgCaiDat.setOnClickListener(v -> {
+            Intent intent = new Intent(ChiTietDonHangActivity.this, CaiDatActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void fetchChiTietDonHang(Long donHangId) {

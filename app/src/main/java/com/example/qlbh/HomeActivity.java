@@ -85,6 +85,16 @@ public class HomeActivity extends AppCompatActivity implements DanhMucAdapter.On
                 startActivity(intent);
             }
         });
+
+        // chuyen sang cai dat
+        imgCaiDat = findViewById(R.id.imageView5);
+        imgCaiDat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, CaiDatActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void fetchDanhMuc() {

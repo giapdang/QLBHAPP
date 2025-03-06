@@ -120,6 +120,16 @@ public class ChiTietSanPhamActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // chuyen sang trang cai dat
+        imgCaiDat = findViewById(R.id.imageViewSettings);
+        imgCaiDat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChiTietSanPhamActivity.this, CaiDatActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     // gọi API để lấy thông tin chi tiết sản phẩm

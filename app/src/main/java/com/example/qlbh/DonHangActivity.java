@@ -64,6 +64,12 @@ public class DonHangActivity extends AppCompatActivity {
       startActivity(intent);
     });
 
+    // Chuyen sang cai dat
+    imgCatDat = findViewById(R.id.imageViewSettings);
+    imgCatDat.setOnClickListener(v -> {
+      Intent intent = new Intent(DonHangActivity.this, CaiDatActivity.class);
+      startActivity(intent);
+    });
   }
 
   // Lay danh sach don hang tu API
