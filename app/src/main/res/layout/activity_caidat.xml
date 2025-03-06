@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+  <LinearLayout
+    android:id="@+id/linearLayoutBottom"
+    android:layout_width="359dp"
+    android:layout_height="65dp"
+    android:layout_marginBottom="16dp"
+    android:padding="8dp"
+    android:background="@drawable/custom_tab"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <ImageView
+      android:id="@+id/imageViewProfile"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_margin="8dp"
+      android:src="@drawable/profile"/>
+
+    <ImageView
+      android:id="@+id/imageViewCart"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_margin="8dp"
+      android:src="@drawable/gio_hang"/>
+
+    <ImageView
+      android:id="@+id/imageViewHome"
+      android:layout_width="52dp"
+      android:layout_height="52dp"
+      android:layout_margin="8dp"
+      android:background="@drawable/imageview_background"
+      android:src="@drawable/trang_chu"/>
+
+    <ImageView
+      android:id="@+id/imageViewHistory"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_margin="8dp"
+      android:src="@drawable/licsu"/>
+
+    <ImageView
+      android:id="@+id/imageViewSettings"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_margin="8dp"
+      android:src="@drawable/cai_dat"/>
+  </LinearLayout>
+  <TextView
+    android:id="@+id/textView17"
+    android:textStyle="bold"
+    android:layout_width="190dp"
+    android:layout_height="51dp"
+    android:layout_marginTop="56dp"
+    android:layout_marginStart="124dp"
+    android:text="Trang cài đặt"
+    android:textAlignment="viewStart"
+    android:textSize="25sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+  <Button
+    android:id="@+id/btnresetpass"
+    android:layout_width="226dp"
+    android:layout_height="49dp"
+    android:layout_marginTop="176dp"
+    android:layout_marginStart="100dp"
+    android:backgroundTint="#3a596b"
+    android:text="Thay đổi mật khẩu"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+  <Button
+    android:id="@+id/btnresetpass2"
+    android:layout_width="226dp"
+    android:layout_height="49dp"
+    android:layout_marginTop="260dp"
+    android:layout_marginStart="100dp"
+    android:backgroundTint="#3a596b"
+    android:text="Xóa tài khoản "
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

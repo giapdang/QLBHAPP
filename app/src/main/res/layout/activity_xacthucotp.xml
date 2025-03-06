@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <ImageView
+    android:id="@+id/back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:layout_marginStart="28dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/back"/>
+  <ImageView
+    android:id="@+id/imageView7"
+    android:layout_width="314dp"
+    android:layout_height="328dp"
+    android:layout_marginTop="84dp"
+    android:layout_marginStart="48dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/otp"/>
+  <TextView
+    android:id="@+id/textView15"
+    android:textStyle="bold"
+    android:layout_width="227dp"
+    android:layout_height="47dp"
+    android:layout_marginTop="440dp"
+    android:layout_marginStart="52dp"
+    android:text="Nhập mã xác minh"
+    android:textAlignment="viewStart"
+    android:textSize="25sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+  <TextView
+    android:id="@+id/textView16"
+    android:layout_width="317dp"
+    android:layout_height="72dp"
+    android:layout_marginTop="496dp"
+    android:layout_marginStart="52dp"
+    android:text="Giờ bạn chỉ cần nhập mật khẩu mới cho tài khoản của bạn thôi! Những việc còn lại hãy để chúng tôi lo liệu giúp bạn."
+    android:textAlignment="viewStart"
+    android:textSize="17sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+  <EditText
+    android:id="@+id/email"
+    android:textStyle="bold"
+    android:layout_width="317dp"
+    android:layout_height="61dp"
+    android:layout_marginTop="640dp"
+    android:layout_marginStart="52dp"
+    android:ems="10"
+    android:hint="Nhập mã xác minh"
+    android:inputType="textEmailAddress"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+  <Button
+    android:id="@+id/btndoipass"
+    android:textStyle="bold"
+    android:layout_width="197dp"
+    android:layout_height="68dp"
+    android:layout_marginTop="744dp"
+    android:layout_marginStart="120dp"
+    android:backgroundTint="#3a596b"
+    android:text="Xác minh OTP"
+    android:textAlignment="center"
+    android:textSize="17sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

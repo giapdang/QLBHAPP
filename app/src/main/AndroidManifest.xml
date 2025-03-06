@@ -20,13 +20,17 @@
     <activity android:name=".RegisterActivity"></activity>
     <activity android:name=".LoginActivity"></activity>
     <activity android:name=".HomeActivity"></activity>
-    <activity android:name=".ForgetPasswordActivity"></activity>
     <activity android:name=".ChiTietSanPhamActivity"></activity>
     <activity android:name=".GioHangActivity"></activity>
     <activity android:name=".DonHangActivity"></activity>
     <activity android:name=".QrActivity"></activity>
     <activity android:name=".ChiTietDonHangActivity"></activity>
     <activity android:name=".ProfileActivity"></activity>
+    <activity android:name=".EmailXacThucActivity"></activity>
+    <activity android:name=".XacThucOtpActivity"></activity>
+    <activity android:name=".ResetPasswordActivity"></activity>
+    <activity android:name=".CaiDatActivity"></activity>
+    <activity android:name=".CaiDatDoiMatKhauActivity"></activity>
     <activity
       android:exported="true"
       android:name=".MainActivity">

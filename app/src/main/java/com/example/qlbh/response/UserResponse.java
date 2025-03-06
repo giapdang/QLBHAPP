@@ -19,9 +19,13 @@ public class UserResponse {
   @SerializedName("dia_chi")
   private String diaChi;
 
-  @SerializedName("ngay_tao")
-  private String ngayTao;
-
+  public UserResponse(Long id, String hoTen, String email, String soDienThoai, String diaChi) {
+    this.id = id;
+    this.hoTen = hoTen;
+    this.email = email;
+    this.soDienThoai = soDienThoai;
+    this.diaChi = diaChi;
+  }
 
   public Long getId() {
     return id;
@@ -61,13 +65,5 @@ public class UserResponse {
 
   public void setDiaChi(String diaChi) {
     this.diaChi = diaChi;
-  }
-
-  public String getNgayTao() {
-    return ngayTao;
-  }
-
-  public void setNgayTao(String ngayTao) {
-    this.ngayTao = ngayTao;
   }
 }

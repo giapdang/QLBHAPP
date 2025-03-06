@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
     quenmk.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Intent intent = new Intent(LoginActivity.this, ForgetPasswordActivity.class);
+        Intent intent = new Intent(LoginActivity.this, EmailXacThucActivity.class);
         startActivity(intent);
       }
     });

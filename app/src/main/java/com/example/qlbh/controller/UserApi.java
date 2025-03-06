@@ -6,6 +6,7 @@ import com.example.qlbh.response.UserResponse;
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.PUT;
 import retrofit2.http.Query;
@@ -23,4 +24,7 @@ public interface UserApi {
 
   @PUT("user/UpdateUser.php")
   Call<Void> updateUser(@Body UpdateUserRequest updateUserRequest);
+
+  @DELETE("user/XoaTaiKhoan.php")
+  Call<Void> deleteUser(@Query("user_id") Long userId);
 }

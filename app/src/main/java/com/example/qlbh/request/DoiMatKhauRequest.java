@@ -5,6 +5,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class DoiMatKhauRequest {
 
+  @SerializedName("user_id")
+  private Long userId;
+
   @SerializedName("old_password")
   private String oldPassword;
 
@@ -14,10 +17,20 @@ public class DoiMatKhauRequest {
   @SerializedName("confirm_password")
   private String confirmPassword;
 
-  public DoiMatKhauRequest(String oldPassword, String newPassword, String confirmPassword) {
+  public DoiMatKhauRequest(Long userId, String oldPassword, String newPassword,
+      String confirmPassword) {
+    this.userId = userId;
     this.oldPassword = oldPassword;
     this.newPassword = newPassword;
     this.confirmPassword = confirmPassword;
+  }
+
+  public Long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Long userId) {
+    this.userId = userId;
   }
 
   public String getOldPassword() {
